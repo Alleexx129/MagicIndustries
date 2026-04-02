@@ -1,0 +1,37 @@
+{
+  "parent": "magicindustries:story/smelt_copper/copper_tools",
+  "criteria": {
+    "craft_gem_saw": {
+      "conditions": {
+        "items": [
+          {
+            "items": "magicindustries:gem_saw"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.story.gem_saw.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "magicindustries:gem_saw"
+    },
+    "title": {
+      "translate": "advancements.story.gem_saw.title"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "requirements": [
+    [
+      "craft_gem_saw"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

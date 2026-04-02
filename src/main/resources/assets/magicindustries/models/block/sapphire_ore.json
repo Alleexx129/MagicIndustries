@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "magicindustries:block/sapphire_ore"
+  }
+}

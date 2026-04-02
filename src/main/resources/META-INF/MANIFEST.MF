@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Specification-Title: magicindustries
+Specification-Vendor: Allex, Tony
+Specification-Version: 1
+Implementation-Title: forge-1.20.1-47.4.0-mdk
+Implementation-Version: 1.5.5
+Implementation-Vendor: Allex, Tony
+Implementation-Timestamp: 2025-09-21T02:22:28-0400
+

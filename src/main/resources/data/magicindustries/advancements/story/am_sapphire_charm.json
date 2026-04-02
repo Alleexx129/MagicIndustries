@@ -1,0 +1,36 @@
+{
+  "parent": "magicindustries:story/smelt_copper/copper_tools/g_gem_saw",
+  "criteria": {
+    "craft_sapphire": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "magicindustries:sapphire_charm"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.story.sapphire_charm.description"
+    },
+    "icon": {
+      "id": "magicindustries:sapphire_charm"
+    },
+    "title": {
+      "translate": "advancements.story.sapphire_charm.title"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "requirements": [
+    [
+      "craft_sapphire"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:merchant_trade",
+  "trades": [
+    {
+      "buy": {
+        "item": "minecraft:emerald",
+        "count": 5
+      },
+      "sell": {
+        "item": "magicindustries:mana_flower",
+        "count": 1
+      },
+      "maxUses": 1,
+      "experience": 1,
+      "priceMultiplier": 1.0
+    }
+  ]
+}
