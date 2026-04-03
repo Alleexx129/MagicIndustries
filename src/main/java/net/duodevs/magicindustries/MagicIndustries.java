@@ -9,15 +9,7 @@ import net.duodevs.magicindustries.item.ModCreativeModTabs;
 import net.duodevs.magicindustries.item.ModItems;
 import net.duodevs.magicindustries.networking.ModMessages;
 import net.duodevs.magicindustries.recipe.ModRecipes;
-import net.duodevs.magicindustries.screen.CoalGeneratorScreen;
-import net.duodevs.magicindustries.screen.ManaExtractorScreen;
-import net.duodevs.magicindustries.screen.ManaHudOverlay;
 import net.duodevs.magicindustries.screen.ModMenuTypes;
-import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraftforge.client.event.RegisterGuiOverlaysEvent;
-import net.minecraftforge.client.gui.overlay.VanillaGuiOverlay;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -51,9 +43,9 @@ public class MagicIndustries {
       eventBus.addListener(this::setup);
       eventBus.addListener(this::enqueueIMC);
       eventBus.addListener(this::processIMC);
-      eventBus.addListener(this::doClientStuff);
+      //eventBus.addListener(this::doClientStuff);
       eventBus.addListener(this::commonSetup);
-      eventBus.addListener(MagicIndustries::registerGuiOverlays);
+      //eventBus.addListener(MagicIndustries::registerGuiOverlays);
       MinecraftForge.EVENT_BUS.register(this);
    }
 
@@ -66,6 +58,8 @@ public class MagicIndustries {
 
       });
    }
+
+   /*
    @SubscribeEvent
    public static void registerGuiOverlays(RegisterGuiOverlaysEvent event) {
       event.registerBelow(VanillaGuiOverlay.CHAT_PANEL.id(), "mana_hud",ManaHudOverlay.HUD_MANA);
@@ -79,6 +73,7 @@ public class MagicIndustries {
          MenuScreens.register(ModMenuTypes.COAL_GENERATOR_MENU.get(), CoalGeneratorScreen::new);
       });
    }
+    */
 
    private void enqueueIMC(InterModEnqueueEvent event) {
 
