@@ -51,7 +51,8 @@ public class ModCreativeModTabs {
                pOutput.accept(ModBlocks.MANA_FLOWER.get());
                pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
                pOutput.accept(ModBlocks.COAL_GENERATOR.get());
-                pOutput.accept(ModItems.MANA_BOTTLE.get());
+                pOutput.accept(ModItems.MANA_FLASK.get());
+                pOutput.accept(ModItems.EMPTY_FLASK.get());
             })
             .build()
    );

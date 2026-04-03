@@ -1,5 +1,10 @@
 package net.duodevs.magicindustries.item.custom;
 
+import net.duodevs.magicindustries.DataContainers.PlayerManaProvider;
+import net.duodevs.magicindustries.event.ModEvents;
+import net.duodevs.magicindustries.item.ModItems;
+import net.duodevs.magicindustries.networking.ModMessages;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.LivingEntity;
@@ -19,9 +24,15 @@ public class ManaBottle extends HoneyBottleItem {
       //super.finishUsingItem(stack, level, entity);
 
       if (entity instanceof Player player) {
+         player.getCapability(PlayerManaProvider.PLAYER_MANA).ifPresent(mana -> {
+            mana.addMana(4);
+            ModEvents.syncMana((ServerPlayer)player);
+         });
          if (!player.getAbilities().instabuild) {
             stack.setCount(stack.getCount()-1);
-            ItemStack emptyBottle = new ItemStack(Items.GLASS_BOTTLE);
+            ItemStack emptyBottle = new ItemStack(ModItems.EMPTY_FLASK.get());
+
+
 
             if (stack.isEmpty()) {
                return emptyBottle;

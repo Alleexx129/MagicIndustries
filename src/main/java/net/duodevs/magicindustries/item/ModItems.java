@@ -51,11 +51,12 @@ public class ModItems {
    public static final RegistryObject<Item> COPPER_HOE = registerItem("copper_hoe", () -> new HoeItem(ModItemTier.COPPER, -2, -1.0F, new Properties()));
    public static final RegistryObject<Item> COPPER_AXE = registerItem("copper_axe", () -> new AxeItem(ModItemTier.COPPER, 6.0F, -3.1F, new Properties()));
    public static final RegistryObject<Item> SAPPHIRE_CHARM = registerItem("sapphire_charm", () -> new SapphireCharm(new Properties()));
-   public static final RegistryObject<Item> NETHERITE_FILTER = registerItem("netherite_filter", () -> new Item(new Properties().stacksTo(1).durability(96)));
-   public static final RegistryObject<Item> GOLDEN_FILTER = registerItem("gold_filter", () -> new Item(new Properties().stacksTo(1).durability(25)));
-   public static final RegistryObject<Item> COPPER_FILTER = registerItem("copper_filter", () -> new Item(new Properties().stacksTo(1).durability(8)));
+   public static final RegistryObject<Item> NETHERITE_FILTER = registerItem("netherite_filter", () -> new Item(new Properties().stacksTo(1).durability(167)));
+   public static final RegistryObject<Item> GOLDEN_FILTER = registerItem("gold_filter", () -> new Item(new Properties().stacksTo(1).durability(30)));
+   public static final RegistryObject<Item> COPPER_FILTER = registerItem("copper_filter", () -> new Item(new Properties().stacksTo(1).durability(12)));
 
-   public static final RegistryObject<Item> MANA_BOTTLE = registerItem("mana_bottle", () -> new ManaBottle(new Properties().stacksTo(64)));
+   public static final RegistryObject<Item> MANA_FLASK = registerItem("mana_flask", () -> new ManaBottle(new Properties().stacksTo(16)));
+   public static final RegistryObject<Item> EMPTY_FLASK = registerItem("empty_flask", () -> new Item(new Properties().stacksTo(64)));
 
    private static RegistryObject<Item> registerItem(String name, Supplier<Item> item) {
       return ITEMS.register(name, item);

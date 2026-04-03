@@ -17,6 +17,8 @@
   "block.magicindustries.deepslate_tungsten_ore": "Deepslate Tungsten Ore",
   "block.magicindustries.mithril_block": "Mithril Block",
   "block.magicindustries.mana_flower": "Mana Flower",
+
+
   "item.magicindustries.mana_water_bucket": "Liquid Mana Bucket",
   "item.magicindustries.mithril_ingot": "Mithril Ingot",
   "item.magicindustries.tungsten_ingot": "Tungsten Ingot",
@@ -24,8 +26,8 @@
   "item.magicindustries.copper_hoe": "Copper Hoe",
   "item.magicindustries.copper_pickaxe": "Copper Pickaxe",
   "item.magicindustries.sapphire_charm": "Sapphire Amulet",
-  "advancements.story.sapphire_charm.description": "Obtain the Sapphire Amulet",
-  "advancements.story.sapphire_charm.title": "Magic!",
+  "item.magicindustries.mana_flask": "Mana Flask",
+  "item.magicindustries.empty_flask": "Empty Flask",
   "item.magicindustries.copper_axe": "Copper Axe",
   "item.magicindustries.copper_sword": "Copper Sword",
   "item.magicindustries.copper_shovel": "Copper Shovel",
@@ -42,9 +44,14 @@
   "item.magicindustries.gem_saw": "Diamond Gemstone Saw",
   "item.magicindustries.netherite_gemstone_saw": "Netherite Gemstone Saw",
   "item.magicindustries.netherite_nugget": "Netherite Nugget",
+
   "creativetab.magic_industries_tab": "Magic Industries",
+
   "tooltip.magicindustries.coal_generator": "Generates power using any fuel source.",
   "screen.magicindustries.coal_generator": " ",
+
+  "advancements.story.sapphire_charm.description": "Obtain the Sapphire Amulet",
+  "advancements.story.sapphire_charm.title": "Magic!",
   "advancements.story.smelt_copper.description": "Smelt a Copper Ingot",
   "advancements.story.smelt_copper_ingot.title": "Copper Age",
   "advancements.story.copper_tools.title": "Getting a Better Upgrade",
