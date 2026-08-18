@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "magicindustries:mana_extractor"
+    },
+    "facing=south": {
+      "model": "magicindustries:mana_extractor",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "magicindustries:mana_extractor",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "magicindustries:mana_extractor",
+      "y": 90
+    }
+  }
+}

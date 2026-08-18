@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ab"
+  ],
+  "key": {
+    "a": {
+      "type": "forge:ore_dict",
+      "ore": "gemstoneSaws"
+    },
+    "b": {
+      "item": "magicindustries:sapphire"
+    }
+  },
+  "result": {
+    "item": "magicindustries:cut_sapphire",
+    "count": 1
+  }
+}

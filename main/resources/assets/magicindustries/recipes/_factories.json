@@ -1,0 +1,5 @@
+{
+  "recipes": {
+    "gem_infusing": "net.duodevs.magicindustries.recipe.ManaExtractorRecipe$Factory"
+  }
+}

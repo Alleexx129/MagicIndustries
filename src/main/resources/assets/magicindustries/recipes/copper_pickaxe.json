@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#b#",
+    " a ",
+    " a "
+  ],
+  "key": {
+    "#": {
+      "type": "forge:ore_dict",
+      "ore": "ingotCopper"
+    },
+    "a": {
+      "item": "minecraft:stick"
+    },
+    "b": {
+      "type": "forge:ore_dict",
+      "ore": "blockCopper"
+    }
+  },
+  "result": {
+    "item": "magicindustries:copper_pickaxe"
+  }
+}

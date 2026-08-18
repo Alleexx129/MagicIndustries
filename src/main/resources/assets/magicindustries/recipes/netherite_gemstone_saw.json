@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "magicindustries:gem_saw"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotNetherite"
+    }
+  ],
+  "result": {
+    "item": "magicindustries:netherite_gemstone_saw"
+  }
+}

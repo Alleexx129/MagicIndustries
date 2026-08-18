@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "b b"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:string"
+    },
+    "b": {
+      "type": "forge:ore_dict",
+      "ore": "ingotCopper"
+    }
+  },
+  "result": {
+    "item": "magicindustries:copper_filter"
+  }
+}

@@ -1,0 +1,105 @@
+buildscript {
+    repositories {
+        maven { url = 'https://maven.minecraftforge.net/' }
+        mavenCentral()
+    }
+    dependencies {
+        // Current MinecraftForge 1.12.x MDK build style.
+        classpath 'net.minecraftforge.gradle:ForgeGradle:3.0.190'
+    }
+}
+
+apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+
+version = '1.5.2-1.12.2'
+group = 'net.duodevs.magicindustries'
+archivesBaseName = 'magicindustries'
+
+sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
+
+minecraft {
+    // MCP stable_39 expressed using ForgeGradle 3 mapping syntax.
+    mappings channel: 'stable', version: '39-1.12'
+    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+
+    runs {
+        client {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+            property 'forge.logging.console.level', 'debug'
+        }
+        server {
+            workingDirectory project.file('run/server')
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+            property 'forge.logging.console.level', 'debug'
+        }
+    }
+}
+
+repositories {
+    flatDir { dirs 'libs' }
+    maven { url = 'https://maven.thiakil.com' }
+    maven { url = 'https://maven.blamejared.com' }
+    maven { url = 'https://dvs1.progwml6.com/files/maven' }
+    mavenCentral()
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2859'
+
+    // If the historical Maven artifacts ever disappear, drop the exact jars into
+    // ./libs. ForgeGradle 3 supports normal local file dependencies here.
+    def localBaubles = file('libs/Baubles-1.12-1.5.2.jar')
+
+    // 4.16.1.302 is kept as the compile-time API baseline, but do NOT use its
+    // full jar as the FG3 dev runtime. That release reverted its FG3 resource/
+    // access changes and crashes in a deobfuscated 1.12.2 FG3 runClient.
+    // 4.16.1.1013 is a later 1.12.2 build published on BlameJared's Maven.
+    def localJeiRuntime = file('libs/jei_1.12.2-4.16.1.1013.jar')
+
+    if (localBaubles.exists()) {
+        implementation files(localBaubles)
+    } else {
+        implementation fg.deobf('com.azanor.baubles:Baubles:1.12-1.5.2')
+    }
+
+    compileOnly 'mezz.jei:jei_1.12.2:4.16.1.302:api'
+    if (localJeiRuntime.exists()) {
+        runtimeOnly files(localJeiRuntime)
+    } else {
+        runtimeOnly fg.deobf('mezz.jei:jei_1.12.2:4.16.1.1013')
+    }
+}
+
+processResources {
+    inputs.property 'version', project.version
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+        expand 'version': project.version
+    }
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}
+
+// FML 1.12 does not reliably load an exploded IntelliJ mod when classes and
+// resources are in separate output directories. Keep the 1.12-era Gradle 4.9
+// syntax here so the 2859 MDK wrapper can import it without newer Gradle APIs.
+sourceSets {
+    main {
+        output.resourcesDir = file('build/combined')
+        java.outputDir = file('build/combined')
+    }
+}
+
+// Package the access transformer so JEI's TextureMap access also works outside dev.
+jar {
+    manifest {
+        attributes 'FMLAT': 'accesstransformer.cfg'
+    }
+}
+
+// ForgeGradle 3 does not automatically reobfuscate the normal jar task.
+jar.finalizedBy('reobfJar')

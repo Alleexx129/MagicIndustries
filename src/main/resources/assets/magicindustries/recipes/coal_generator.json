@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#a#",
+    "bcb"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:cobblestone"
+    },
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "minecraft:stone",
+      "data": 0
+    },
+    "c": {
+      "type": "forge:ore_dict",
+      "ore": "blockTungsten"
+    }
+  },
+  "result": {
+    "item": "magicindustries:coal_generator"
+  }
+}

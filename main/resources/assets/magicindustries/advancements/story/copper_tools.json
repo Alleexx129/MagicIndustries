@@ -1,0 +1,35 @@
+{
+  "parent": "magicindustries:story/smelt_copper",
+  "criteria": {
+    "copper_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "item": "magicindustries:copper_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.story.copper_tools.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "magicindustries:copper_pickaxe"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.story.copper_tools.title"
+    }
+  },
+  "requirements": [
+    [
+      "copper_pickaxe"
+    ]
+  ]
+}

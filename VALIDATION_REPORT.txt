@@ -1,0 +1,6 @@
+PASS checks: 377/377
+Java files: 46
+Resource files: 169
+JSON files parsed: 112
+OreDictionary recipe files: 27
+STATIC VALIDATION PASSED

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "!!!",
+    "#a#",
+    "ccc"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:cobblestone"
+    },
+    "!": {
+      "type": "forge:ore_dict",
+      "ore": "ingotMithril"
+    },
+    "a": {
+      "item": "minecraft:gold_block"
+    },
+    "c": {
+      "type": "forge:ore_dict",
+      "ore": "blockTungsten"
+    }
+  },
+  "result": {
+    "item": "magicindustries:mana_extractor"
+  }
+}
