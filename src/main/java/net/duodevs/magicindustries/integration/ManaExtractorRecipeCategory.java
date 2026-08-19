@@ -1,5 +1,5 @@
 package net.duodevs.magicindustries.integration;
-
+/*
 import java.util.List;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.forge.ForgeTypes;
@@ -54,3 +54,4 @@ public class ManaExtractorRecipeCategory implements IRecipeCategory<ManaExtracto
       builder.addSlot(RecipeIngredientRole.OUTPUT, 86, 60).addItemStack(recipe.getResultItem(RegistryAccess.EMPTY));
    }
 }
+*/

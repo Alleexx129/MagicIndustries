@@ -1,4 +1,6 @@
+
 package net.duodevs.magicindustries.integration;
+/*
 
 import java.util.List;
 import java.util.Objects;
@@ -32,3 +34,4 @@ public class JEITutorialModPlugin implements IModPlugin {
       registration.addRecipes(INFUSION_TYPE, recipesInfusing);
    }
 }
+*/
