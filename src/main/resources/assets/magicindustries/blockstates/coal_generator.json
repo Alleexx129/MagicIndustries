@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "magicindustries:block/coal_generator"
+    },
+    "facing=south": {
+      "model": "magicindustries:block/coal_generator",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "magicindustries:block/coal_generator",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "magicindustries:block/coal_generator",
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "magicindustries:netherite_filter",
+    "magicindustries:gold_filter",
+    "magicindustries:copper_filter"
+  ]
+}

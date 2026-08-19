@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "magicindustries:raw_tungsten"
+  },
+  "result": {
+    "id": "magicindustries:tungsten_ingot"
+  },
+  "experience": 0.2,
+  "cookingtime": 100
+}
