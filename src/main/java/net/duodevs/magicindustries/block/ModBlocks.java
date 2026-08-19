@@ -28,7 +28,7 @@ public class ModBlocks {
       "sapphire_ore", () -> new Block(Properties.ofFullCopy(Blocks.EMERALD_ORE).requiresCorrectToolForDrops().strength(2.0F))
    );
    public static final Supplier<LiquidBlock> MANA_WATER_BLOCK = BLOCKS.register(
-      "mana_water_block", () -> new LiquidBlock(ModFluids.SOURCE_MANA_WATER, Properties.ofFullCopy(Blocks.WATER))
+      "mana_water_block", () -> new LiquidBlock(ModFluids.SOURCE_MANA_WATER.get(), Properties.ofFullCopy(Blocks.WATER))
    );
    public static final Supplier<Block> DEEPSLATE_SAPPHIRE_ORE = registerBlock(
       "deepslate_sapphire_ore", () -> new Block(Properties.ofFullCopy(Blocks.DEEPSLATE_EMERALD_ORE).requiresCorrectToolForDrops().strength(3.0F))

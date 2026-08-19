@@ -17,10 +17,10 @@ public final class ModFluids {
     public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(Registries.FLUID, MagicIndustries.MOD_ID);
 
     public static final Supplier<FlowingFluid> SOURCE_MANA_WATER = FLUIDS.register(
-            "mana_water_fluid", () -> new BaseFlowingFluid.Source(MANA_WATER_FLUID_PROPERTIES)
+            "mana_water_fluid", () -> new BaseFlowingFluid.Source(ModFluids.MANA_WATER_FLUID_PROPERTIES)
     );
     public static final Supplier<FlowingFluid> FLOWING_MANA_WATER = FLUIDS.register(
-            "flowing_mana_water", () -> new BaseFlowingFluid.Flowing(MANA_WATER_FLUID_PROPERTIES)
+            "flowing_mana_water", () -> new BaseFlowingFluid.Flowing(ModFluids.MANA_WATER_FLUID_PROPERTIES)
     );
 
     public static final BaseFlowingFluid.Properties MANA_WATER_FLUID_PROPERTIES =

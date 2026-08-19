@@ -15,7 +15,7 @@ import net.minecraft.core.registries.Registries;
 public class ModItems {
    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(Registries.ITEM, "magicindustries");
    public static final Supplier<Item> MANA_WATER_BUCKET = ITEMS.register(
-      "mana_water_bucket", () -> new BucketItem(ModFluids.SOURCE_MANA_WATER, new Properties().stacksTo(1).craftRemainder(Items.BUCKET))
+      "mana_water_bucket", () -> new BucketItem(ModFluids.SOURCE_MANA_WATER.get(), new Properties().stacksTo(1).craftRemainder(Items.BUCKET))
    );
    public static final Supplier<Item> COPPER_INGOT = registerItem("copper_ingot", () -> new Item(new Properties()));
    public static final Supplier<Item> RAW_TUNGSTEN = registerItem("raw_tungsten", () -> new Item(new Properties()));
