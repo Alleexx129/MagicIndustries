@@ -8,7 +8,7 @@
     "url": "https://github.com/Alleexx129/MagicIndustries",
     "authorList": ["Alex", "Tony", "Fil4legends"],
     "credits": "Original mod by Alex with textures by Tony and Fil4legends. 1.12.2 backport.",
-    "requiredMods": ["forge@[14.23.5.2859,)", "baubles@[1.5.2,)", "jei@[4.16.1.302,)"],
+    "requiredMods": ["forge@[14.23.5.2859,)", "baubles@[1.5.2,)"],
     "dependencies": [],
     "useDependencyInformation": true
   }

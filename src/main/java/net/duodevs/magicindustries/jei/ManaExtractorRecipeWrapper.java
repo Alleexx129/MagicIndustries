@@ -2,12 +2,12 @@ package net.duodevs.magicindustries.jei;
 
 import java.util.Arrays;
 import java.util.Collections;
-import mezz.jei.api.ingredients.IIngredients;
-import mezz.jei.api.recipe.IRecipeWrapper;
+// import mezz.jei.api.ingredients.IIngredients;
+// import mezz.jei.api.recipe.IRecipeWrapper;
 import net.duodevs.magicindustries.recipe.ManaExtractorRecipe;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
-
+/*
 public final class ManaExtractorRecipeWrapper implements IRecipeWrapper {
     private final ManaExtractorRecipe recipe;
 
@@ -21,4 +21,4 @@ public final class ManaExtractorRecipeWrapper implements IRecipeWrapper {
         if (fluid != null) ingredients.setInput(FluidStack.class, fluid);
         ingredients.setOutput(ItemStack.class, recipe.getMachineOutput());
     }
-}
+}*/

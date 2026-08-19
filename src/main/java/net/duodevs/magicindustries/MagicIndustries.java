@@ -24,7 +24,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
     name = MagicIndustries.NAME,
     version = MagicIndustries.VERSION,
     acceptedMinecraftVersions = "[1.12.2]",
-    dependencies = "required-after:forge@[14.23.5.2859,);required-after:baubles@[1.5.2,);required-after:jei@[4.16.1.302,)"
+    dependencies = "required-after:forge@[14.23.5.2859,);required-after:baubles@[1.5.2,);"//required-after:jei@[4.16.1.302,)"
 )
 public class MagicIndustries {
     public static final String MODID = "magicindustries";
