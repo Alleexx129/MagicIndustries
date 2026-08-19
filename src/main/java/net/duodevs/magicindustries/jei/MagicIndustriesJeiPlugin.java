@@ -1,3 +1,5 @@
+/*
+
 package net.duodevs.magicindustries.jei;
 
 import java.util.ArrayList;
@@ -32,3 +34,4 @@ public final class MagicIndustriesJeiPlugin implements IModPlugin {
         registry.addRecipeClickArea(GuiManaExtractor.class, 45, 30, 56, 20, ManaExtractorRecipeCategory.UID);
     }
 }
+*/

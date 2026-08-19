@@ -1,5 +1,5 @@
 package net.duodevs.magicindustries.jei;
-
+/*
 import mezz.jei.api.IGuiHelper;
 import mezz.jei.api.gui.IDrawable;
 import mezz.jei.api.gui.IGuiFluidStackGroup;
@@ -43,3 +43,4 @@ public final class ManaExtractorRecipeCategory implements IRecipeCategory<ManaEx
         fluids.set(ingredients);
     }
 }
+*/
