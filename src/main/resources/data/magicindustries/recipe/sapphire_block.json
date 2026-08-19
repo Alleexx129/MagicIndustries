@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "magicindustries:cut_sapphire"
+    }
+  },
+  "result": {
+    "id": "magicindustries:sapphire_block"
+  }
+}
