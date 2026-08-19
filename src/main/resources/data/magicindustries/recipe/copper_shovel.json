@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    " a ",
+    " a "
+  ],
+  "key": {
+    "#": "minecraft:copper_block",
+    "a": "minecraft:stick"
+  },
+  "result": {
+    "id": "magicindustries:copper_shovel"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": "magicindustries:raw_tungsten",
+  "result": {
+    "id": "magicindustries:tungsten_ingot"
+  },
+  "experience": 0.2,
+  "cookingtime": 200
+}

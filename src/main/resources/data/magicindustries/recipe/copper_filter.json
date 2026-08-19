@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "b b"
+  ],
+  "key": {
+    "#": "minecraft:string",
+    "b": "minecraft:copper_ingot"
+  },
+  "result": {
+    "id": "magicindustries:copper_filter"
+  }
+}

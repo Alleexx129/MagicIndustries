@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "b b"
+  ],
+  "key": {
+    "#": "minecraft:string",
+    "b": "minecraft:gold_ingot"
+  },
+  "result": {
+    "id": "magicindustries:gold_filter"
+  }
+}

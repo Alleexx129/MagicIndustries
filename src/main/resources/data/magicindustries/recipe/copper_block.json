@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": "magicindustries:copper_ingot"
+  },
+  "result": {
+    "id": "magicindustries:copper_block"
+  }
+}

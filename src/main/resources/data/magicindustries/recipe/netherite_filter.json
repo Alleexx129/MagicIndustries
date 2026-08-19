@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "b b"
+  ],
+  "key": {
+    "#": "minecraft:string",
+    "b": "magicindustries:netherite_nugget"
+  },
+  "result": {
+    "id": "magicindustries:netherite_filter"
+  }
+}

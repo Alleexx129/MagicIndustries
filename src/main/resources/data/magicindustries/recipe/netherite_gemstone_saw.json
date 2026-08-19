@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:netherite_ingot",
+  "base": "magicindustries:gem_saw",
+  "result": {
+    "id": "magicindustries:netherite_gemstone_saw"
+  },
+  "template": "minecraft:netherite_upgrade_smithing_template"
+}

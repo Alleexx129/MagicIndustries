@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "b b",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:copper_ingot",
+    "b": "minecraft:copper_block"
+  },
+  "result": {
+    "id": "magicindustries:copper_chestplate"
+  }
+}

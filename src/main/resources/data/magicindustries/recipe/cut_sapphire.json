@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ab"
+  ],
+  "key": {
+    "a": "#forge:gemstone_saws",
+    "b": "magicindustries:sapphire"
+  },
+  "result": {
+    "id": "magicindustries:cut_sapphire",
+    "count": 1
+  }
+}

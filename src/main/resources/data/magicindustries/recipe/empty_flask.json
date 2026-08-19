@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "a",
+    "a"
+  ],
+  "key": {
+    "a": "minecraft:glass"
+  },
+  "result": {
+    "id": "magicindustries:empty_flask",
+    "count": 3
+  }
+}

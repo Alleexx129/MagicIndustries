@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#a#",
+    "bcb"
+  ],
+  "key": {
+    "#": "minecraft:cobblestone",
+    "a": "minecraft:iron_ingot",
+    "b": "minecraft:smooth_stone",
+    "c": "magicindustries:tungsten_block"
+  },
+  "result": {
+    "id": "magicindustries:coal_generator"
+  }
+}

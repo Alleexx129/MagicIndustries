@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": "magicindustries:mithril_ore",
+  "result": {
+    "id": "magicindustries:mithril_ingot"
+  },
+  "experience": 0.2,
+  "cookingtime": 100
+}
