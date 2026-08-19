@@ -19,7 +19,7 @@ public class EnergyInfoArea2 extends InfoArea {
    }
 
    public List<Component> getTooltips() {
-      return List.of(Component.translatable(this.energy.getEnergyStored() + "/" + this.energy.getMaxEnergyStored() + " FE"));
+      return List.of(Component.literal(this.energy.getEnergyStored() + "/" + this.energy.getMaxEnergyStored() + " FE"));
    }
 
    @Override

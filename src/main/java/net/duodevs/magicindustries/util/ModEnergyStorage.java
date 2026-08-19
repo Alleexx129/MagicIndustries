@@ -30,8 +30,8 @@ public abstract class ModEnergyStorage extends EnergyStorage {
    }
 
    public int setEnergy(int energy) {
-      this.energy = energy;
-      return energy;
+      this.energy = Math.max(0, Math.min(this.capacity, energy));
+      return this.energy;
    }
 
    public abstract void onEnergyChanged();

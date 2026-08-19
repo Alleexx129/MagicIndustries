@@ -170,7 +170,7 @@ public class ManaExtractorBlockEntity extends BlockEntity implements MenuProvide
    }
 
    public Component getDisplayName() {
-      return Component.literal("Mana Extractor");
+      return Component.translatable("block.magicindustries.mana_extractor");
    }
 
    @Override

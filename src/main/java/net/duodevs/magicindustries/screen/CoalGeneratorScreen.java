@@ -38,12 +38,10 @@ public class CoalGeneratorScreen extends AbstractContainerScreen<CoalGeneratorMe
       guiGraphics.blit(RenderPipelines.GUI_TEXTURED, TEXTURE, x, y, 0, 0, this.imageWidth, this.imageHeight, 256, 256);
       this.energyInfoArea.draw(guiGraphics);
       this.renderProgressArrow(guiGraphics, x, y);
-      this.renderTooltip(guiGraphics, pMouseX, pMouseY);
    }
 
    private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {
       guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ARROW_TEXTURE, x + 47, y + 33, 0, 0, ((CoalGeneratorMenu)this.menu).getScaledProgress(), 20, 256, 256);
-      this.energyInfoArea.draw(guiGraphics);
    }
 
    public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float delta) {

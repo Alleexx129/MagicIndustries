@@ -69,7 +69,7 @@ public class ModBlocks {
    }
 
    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
-      return ModItems.ITEMS.register(name, () -> new BlockItem((Block)block.get(), new net.minecraft.world.item.Item.Properties().setId(ModItems.ITEMS.key(name))));
+      return ModItems.ITEMS.register(name, () -> new BlockItem((Block)block.get(), new net.minecraft.world.item.Item.Properties().setId(ModItems.ITEMS.key(name)).useBlockDescriptionPrefix()));
    }
 
    public static void register(BusGroup eventBus) {

@@ -49,5 +49,6 @@
   "advancements.story.copper_tools.title": "Getting a Better Upgrade",
   "advancements.story.copper_tools.description": "Craft and Acquire a Copper Pickaxe",
   "advancements.story.gem_saw.title": "Deadly blade? Or maybe not...",
-  "advancements.story.gem_saw.description": "Acquire a Gemstone saw"
+  "advancements.story.gem_saw.description": "Acquire a Gemstone saw",
+  "block.magicindustries.mana_water_block": "Liquid Mana"
 }

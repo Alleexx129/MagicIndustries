@@ -9,7 +9,6 @@ import net.duodevs.magicindustries.screen.CoalGeneratorMenu;
 import net.duodevs.magicindustries.util.ModEnergyStorage;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.Containers;
@@ -110,7 +109,7 @@ public class CoalGeneratorBlockEntity extends BlockEntity implements MenuProvide
    }
 
    public Component getDisplayName() {
-      return Component.literal("Heat Generator");
+      return Component.translatable("block.magicindustries.coal_generator");
    }
 
    @Override
@@ -130,11 +129,7 @@ public class CoalGeneratorBlockEntity extends BlockEntity implements MenuProvide
    }
 
    private int getBurnTime(ItemStack stack) {
-      if (this.level instanceof ServerLevel serverLevel) {
-         return serverLevel.fuelValues().burnDuration(stack, RecipeType.SMELTING);
-      }
-
-      return stack.isEmpty() ? 0 : 1;
+      return this.level == null || stack.isEmpty() ? 0 : this.level.fuelValues().burnDuration(stack, RecipeType.SMELTING);
    }
 
    public void setEnergyLevel(int energy) {
@@ -266,7 +261,7 @@ public class CoalGeneratorBlockEntity extends BlockEntity implements MenuProvide
    }
 
    public static boolean hasEnoughItems(CoalGeneratorBlockEntity pEntity) {
-      return pEntity.itemHandler.getStackInSlot(0).getCount() > 0;
+      return pEntity.getBurnTime(pEntity.itemHandler.getStackInSlot(0)) > 0;
    }
 
    public static void tick(Level level, BlockPos pos, BlockState state, CoalGeneratorBlockEntity pEntity) {
@@ -278,20 +273,16 @@ public class CoalGeneratorBlockEntity extends BlockEntity implements MenuProvide
             }
 
             double scalingFactor = Math.log((double)(burnTime + 1)) / Math.log(1601.0);
-            pEntity.progress = (int)((double)pEntity.progress + scalingFactor * ((double)pEntity.maxProgress / 100.0));
+            pEntity.progress += Math.max(1, (int)Math.ceil(scalingFactor * ((double)pEntity.maxProgress / 100.0)));
             setChanged(level, pos, state);
             if (pEntity.progress >= pEntity.maxProgress) {
+               int generatedEnergy = Math.max(1, (int)Math.round(1000.0 * (double)burnTime / 1600.0));
                if (pEntity.itemHandler.getStackInSlot(0).getItem() == Items.LAVA_BUCKET) {
                   pEntity.itemHandler.setStackInSlot(0, new ItemStack(Items.BUCKET));
-                  pEntity.ENERGY_STORAGE.setEnergy(pEntity.ENERGY_STORAGE.getEnergyStored() + 12500);
                } else {
                   pEntity.itemHandler.getStackInSlot(0).shrink(1);
-                  pEntity.ENERGY_STORAGE
-                     .setEnergy(
-                        pEntity.ENERGY_STORAGE.getEnergyStored()
-                           + 1000 * (burnTime / 1600)
-                     );
                }
+               pEntity.ENERGY_STORAGE.setEnergy(pEntity.ENERGY_STORAGE.getEnergyStored() + generatedEnergy);
 
                if (pEntity.ENERGY_STORAGE.getEnergyStored() > pEntity.ENERGY_STORAGE.getMaxEnergyStored()) {
                   pEntity.ENERGY_STORAGE.setEnergy(pEntity.ENERGY_STORAGE.getMaxEnergyStored());
